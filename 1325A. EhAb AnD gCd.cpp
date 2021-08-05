@@ -8,6 +8,7 @@
 #include<cstring>
 typedef long long ll;
 using namespace std;
+
 void init()
 {
     cin.tie(0);
