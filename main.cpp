@@ -16,7 +16,7 @@ void init()
 int main()
 {
     init();
-    //freopen("max-pair.in","r",stdin);
+    //freopen("file.in","r",stdin);
     int t,n;
     cin>>t;
     while (t--){
