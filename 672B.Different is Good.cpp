@@ -17,7 +17,7 @@ void init()
 int main()
 {
     init();
-    //freopen("file.in","r",stdin);
+   //freopen("file.in","r",stdin);
     int n;
     string s;
     cin>>n>>s;
