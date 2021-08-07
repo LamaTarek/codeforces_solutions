@@ -28,7 +28,7 @@ int main()
    else{
        arr[0]=0;
        sort(arr,arr+n+1);
-       int i=1,j=n/k;
+       int i=1,j=n/k;           //two_pointers
        ll sum=0;
        while (j<=n){
            sum+=(arr[j]-arr[i]);
