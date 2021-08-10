@@ -19,8 +19,8 @@ void init()
 #define posmod(v,m) ((v)%(m)+(m))%(m)
 int main()
 {
-    init();
     //freopen("file.in","r",stdin);
+    init();
     string s;
     cin >> s;
     if ((s[s.size() - 1] - '0') < 9)s[s.size() - 1] = ((s[s.size() - 1] - '0') + '1');
