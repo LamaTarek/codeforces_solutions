@@ -19,7 +19,7 @@ void init()
 }
 int main() {
     init();
-    //freopen("file.in","r",stdin);
+     //freopen("file.in","r",stdin);
     int arr[4];
     int t;
     cin>>t;
