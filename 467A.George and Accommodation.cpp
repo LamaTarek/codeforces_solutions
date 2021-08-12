@@ -17,8 +17,6 @@ void init()
     cin.tie(0);
     cin.sync_with_stdio(0);
 }
-#define posmod(v,m) ((v)%(m)+(m))%(m)
-#define cl(x,val) memset(x,val,sizeof(x))
 deque<int>q;
 int main() {
     init();
