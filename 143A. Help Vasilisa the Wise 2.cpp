@@ -29,7 +29,4 @@ int main(){
     if(flag) cout<<arr[0]<<" "<<arr[1]<<"\n"<<arr[2]<<" "<<arr[3]<<"\n";
     else cout<<-1<<"\n";
     return 0;
-}                                   //   13          10      19     16
-                                     // 12          3        9
-                                   //   17          7       10
-                                   //
+}                        
