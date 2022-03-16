@@ -1,40 +1,29 @@
 #include <iostream>
-#include<string>
-#include<iomanip>
-#include<cmath>
-#include<algorithm>
-#include<vector>
-#include<numeric>
-#include<cstring>
-#include <set>
-#include <stack>
-#include <deque>
+#include <bits/stdc++.h>
 #include <queue>
-typedef long long ll;
+#include <algorithm>
+#include <set>
+#include <cmath>
 using namespace std;
-void init()
-{
+typedef long long ll;
+void init(){
     cin.tie(0);
     cin.sync_with_stdio(0);
 }
 int main() {
     init();
-    //freopen("file.in","r",stdin);
     int n;
-    cin >> n;
-    int wires[n + 1];
-    wires[0]=0;
-    for (int i = 1; i <= n; i++)cin >> wires[i];
-    int q, index, bird;
-    cin >> q;
-    while (q--) {
-        cin >> index >> bird;
-        if (index != 1)wires[index - 1] += (bird - 1);
-        if (index != n)wires[index + 1] += (wires[index] - bird);
-        wires[index] = 0;
+    cin>>n;
+    int wire[n+2];
+    for (int i = 1; i <= n; ++i)cin>>wire[i];
+    int t,x,y;
+    cin>>t;
+    while (t--){
+        cin>>x>>y;
+        wire[x-1]+=(y-1);
+        wire[x+1]+=(wire[x]-y);
+        wire[x]=0;
     }
-    for (int i = 1; i <= n; ++i) {
-        cout << wires[i] << "\n";
-    }
+    for (int i = 1; i <= n; ++i) cout<<wire[i]<<"\n";
     return 0;
 }
