@@ -1,36 +1,32 @@
 #include <iostream>
-#include<string>
-#include<iomanip>
-#include<algorithm>
-#include<map>
+#include <bits/stdc++.h>
 #include <queue>
-#include <cstring>
+#include <algorithm>
 #include <set>
-#define clr(x,val) memset(x,val,sizeof(x))
-typedef long long ll;
+#include <cmath>
 using namespace std;
-void init() {
+typedef long long ll;
+void init(){
     cin.tie(0);
     cin.sync_with_stdio(0);
 }
 int main() {
     init();
-    priority_queue<int>q;
-    int n,num,order;
+    int n;
     cin>>n;
-    order=n;
-    while (n--){
-        cin>>num;
-        if(num!=order){cout<<endl; q.push(num);}
-        else{
-            q.push(num);
-            while (!q.empty() && q.top()==order){
-                cout<<q.top()<<" ";
-                q.pop();
-                order--;
-            }
-            cout<<endl;
+    int arr1[n],arr2[n];
+    priority_queue<int>q;
+    for (int i = 0; i < n; ++i) {cin>>arr1[i];arr2[i]=arr1[i];}
+    sort(arr2,arr2+n,greater<int>());
+    int j=0;
+    for (int i = 0; i < n; ++i) {
+        q.push(arr1[i]);
+        while (q.top()==arr2[j]){
+            cout<<q.top()<<" ";
+            q.pop();
+            j++;
         }
+        cout<<"\n";
     }
     return 0;
 }
